@@ -1,7 +1,7 @@
 var config = {
     type: Phaser.AUTO,
-    width: 1536,
-    height: 768,
+    width: 1236,
+    height: 670,
     title: 'headshot',
     physics: {
         default: 'arcade',
@@ -39,12 +39,12 @@ function create() {
     // добавление фона
     var background = this.add.image(0, 0, 'background').setOrigin(0, 0);
     
-    this.physics.world.setBounds(0, 0, 768, 768);
+    this.physics.world.setBounds(0, 0, 768, 670);
     //жизни
     lives = 3;
     livesText = this.add.text(16, 16, 'Lives: ' + lives, { fontSize: '32px', fill: '#FFF' });
     //текст про управление 
-    var controlText = this.add.text(1213, 638, 'Маштаб экрана: ctl-\n Управление: <- -> \nВыстрел на Пробел', { fontSize: '32px', fill: '#FFF' });
+    var controlText = this.add.text(1213, 538, 'Маштаб экрана: ctrl-\n Управление: <- -> \nВыстрел на Пробел', { fontSize: '32px', fill: '#FFF' });
     controlText.setOrigin(1, 0);
     // добавление игрока
     player = this.physics.add.sprite(400, 550, 'player').setScale(0.2);
